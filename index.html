@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development-Chamber of commerse">
+    <meta name="author" content="Juanita Perez Aguilera">
+    <title>Chamber of Commerse- Santiago Busi.Net </title>
+    <!-- Metapropiedades de Open Graph -->
+    <meta property="og:title" content="Juanita P. Aguilera - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jpgitidaho.github.io/WDD-230-/">
+    <meta property="og:url" content="https://jpgitidaho.github.io/WDD-230-/">
+    <link rel="icon" href="./images/chamberofcommerce.ico.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Love+Light&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://coolors.co/001524-15616d-ffecd1-ff7d00-78290f">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/medium.css">
+
+</head>
+
+<body>
+    <header id="miHeader">
+        <a class="logo-link" href="./index.html">
+            <img class="logo" src="./images/chile net.png" alt="imag logo">
+        </a>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./discover.html">Discover</a>
+            <a href="./directory.html">Directory</a>
+            <button class="button button-join"><a href="./join.html">Book Now</a></button>
+        </nav>
+
+        <button id="burger-icon" class="responsive-menu" onclick="toggleMenu()" title="Toggle Menu"></button>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode"><i
+                class="material-icons">brightness_3</i></button>
+
+    </header>
+    <div id="banner">
+        <p>📢
+            Don't forget to attend the Chamber of Commerce meeting this Wednesday at 7:00 p.m.! <button id="closeBanner"
+                title="close text"><i class="material-icons">close</i></button>
+        </p>
+    </div>
+    <div class="hero">
+        <div class="zoomable">
+            <picture>
+                <source media="(min-width: 300px)"
+                    srcset="https://raw.githubusercontent.com/JPgitidaho/WDD-230-/main/chamber/images/hero-1.webp">
+            
+                <!-- Para pantallas grandes -->
+                <source media="(min-width: 992px)"
+                    srcset="https://raw.githubusercontent.com/JPgitidaho/WDD-230-/main/chamber/images/hero-1.webp">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta picture -->
+                <img src="https://raw.githubusercontent.com/JPgitidaho/WDD-230-/main/chamber/images/hero-1.webp"
+                    alt="hero image">
+            </picture>
+            <h1 class="h1-hero">Promoting cultural and economic integration</h1>
+            <button class="button book"><a href="./join.html">Book Now</a></button>
+        </div>
+    </div>
+    <main class=" home-box">
+        <div class="home-grid">
+            <section class="card information">
+                <h2>Chamber of Commerse- Santiago BusiNet</h2>
+                <p>
+                    Our goal is to foster a vibrant
+                    technological ecosystem in our community, facilitating the development
+                    of cutting-edge solutions and providing valuable resources. Through strategic
+                    partnerships, we aim to bolster our efforts in attracting and retaining
+                    technology-driven businesses, while also advocating for policies that support
+                    a thriving tech industry. By doing so, we contribute to the creation of sustainable
+                    and technologically advanced communities.
+                </p>
+
+                <h2 class="firm">Juanita P Aguilera</h2> DIRECTOR TREASURER SANTIAGO BUSI.NET CHAMBER OF COMMERCE
+            </section>
+            <section class=" card business">
+                <img src="./images/business.jpg" alt="meet-chamber">
+                
+            </section>
+
+
+        </div>
+            <section class="weather card">
+                <div>
+                    <h2>Weather</h2>
+                    <div id="weather-info">
+                    </div>
+                </div>
+            </section>
+            <div class="home-grid-cards">           
+            <section class="card1 card">
+                <div class="zoomable">
+                <img src="./images/img-compress/img-banner.jpg " alt="Pymes" class="image">
+                </div>
+                <div class="overlay">
+                    <div class="text">
+                        <ul>
+                            <li>
+                                <i class="material-icons medalla-icon">emoji_events</i>
+                                <h2> Elect to become a member and enjoy our benefits</h2>
+                            </li>
+                            <li>
+                                <p>
+                                    Your business will also be able to offer its custom
+                                    services to our community and promote your brand within
+                                    our digital channels.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <section class="card2 card">
+                <div class="zoomable">
+                <img src="./images/EVENTO-ANALISIS.webp" alt="Avatar" class="image">
+            </div>
+                <div class="overlay">
+
+                    <div class="text">
+                        <i class="material-icons">date_range</i>
+                        <h2> Participation in Events</h2>
+                        <p>
+                            The Chamber organizes and sponsors
+                            a wide range of events designed to
+                            promote business opportunities for our members.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="card3 card">
+                <div class="zoomable">
+                <img src="./images/pymes.webp" alt="Avatar" class="image">
+            </div>
+
+                <div class="overlay">
+
+                    <div class="text">
+                        <i class="material-icons">lightbulb</i>
+                        <h2>Promotional Opportunities</h2>
+                        <p>
+                            The Chamber offers its members various possibilities
+                            to promote their products and services.
+                        </p>
+                    </div>
+                </div>
+            </section>
+     </div>   
+    </main>
+    <footer class="home-grid ">
+        <section>
+            <img class="logo-footer" src="./images/chile net.png" alt="imag footer">
+            <ul>
+                <li>
+                    <p>
+                        Founded in 1991 by a group of Chilean executives residing in the county of Santiago, Chile.
+                    <p id="copyright-info"> &copy; - Juanita P. Aguilera</p>
+                    <p id="last-modified"></p>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="social">
+            <ul>
+                <li>
+                    <a class="fa-social" href="https://www.facebook.com/tu_pagina"><i class="fa fa-facebook"></i></a>
+                    <a class="fa-social" href="https://www.linkedin.com/in/tu_perfil"><i class="fa fa-linkedin"></i></a>
+                    <a class="fa-social" href="https://www.instagram.com/tu_cuenta"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <p>
+                        <i class="material-icons">location_on</i> <a class="contact"
+                            href="https://www.google.com/maps/place/Monjitas+392,+8320113+Santiago,+Regi%C3%B3n+Metropolitana/@-33.4366209,-70.6432271,17z/data=!3m1!4b1!4m6!3m5!1s0x9662c598f81d9481:0x2bb86b8c8a39a606!8m2!3d-33.4366209!4d-70.6432271!16s%2Fg%2F11cncf43qx?entry=ttu#:~:text=Monjitas%20392%2C%208320113%20Santiago%2C%20Regi%C3%B3n%20Metropolitana">Monjitas
+                            392, 8320113 Santiago, Región Metropolitana</a>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a class="contact" href="tel:+56223607000"><i class="material-icons">phone </i> +56 2 230000</a>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a class="contact" href="mailto:santiagobusi.net@gmail.com"><i class="material-icons">email</i>
+                            Email Us!
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <div class="subscribe social">
+            <hr>
+            <h3>Subscribe to our newsletter</h3>
+            <!-- Form -->
+            <form action="./gratitude.html" method="get">
+                <label for="nombre"></label>
+                <input type="text" id="name" name="nombre" required placeholder="Name">
+                <label for="apellido"></label>
+                <input type="text" id="lastName" name="apellido" required placeholder="Last Name">
+                <label for="email">Your email:</label>
+                <input type="email" id="mail" name="email" required placeholder="example@email.com">
+                <!-- Submit Button -->
+                <button class="button"><a href="./join.html">Subscribe</a></button>
+            </form>
+        </div>
+
+
+    </footer>
+    <!-- Script de JavaScript -->
+    <script src="./scripts/banner.js"></script>
+    <script src="./scripts/getdates-chamb.js"></script>
+    <script src="./scripts/myHeader.js"></script>
+    <script src="./scripts/darkMode.js"></script>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

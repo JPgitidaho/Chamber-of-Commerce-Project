@@ -1,0 +1,77 @@
+{
+    "members": [
+      {
+        "name": "A&B Pacific Logistics",
+        "website": "https://abpacific.cl",
+        "address": "Francisco Noguera 200 - Oficina 702 Providencia , Santiago / Chile",
+        "email": "contacto@abpacific.cl",
+        "phoneNumber": "+56229439937",
+        "image": "https://abpacific.cl/wp-content/uploads/2023/07/logo-negro.png"
+      },
+      {
+        "name": "Proveedores ACHS",
+        "website": "https://achs.cl",
+        "address": "Ramón Carnicer 163, Providencia, Santiago",
+        "email": "achs@achs.cl",
+        "phoneNumber": "+56006002247",
+        "image": "https://achs.cl/images/librariesprovider2/logo/logo-achs-2023.svg"
+
+      },
+      {
+        "name": "EIT Logística",
+        "website": "https://www.eit.cl",
+        "address": "Los Maitenes 11.600, Enea Pudahuel, Santiago de Chile",
+        "email": "contacto@eit.cl",
+        "phoneNumber": "+56228407400",
+        "image": "https://www.eit.cl/wp-content/uploads/2021/05/logo-eit3.png"
+
+      },
+      {
+        "name": "VTEX Chile",
+        "website": "https://vtex.com",
+        "address": "Av. Apoquindo 5950, Piso 3, Of 124, 7560932 Las Condes, Región Metropolitana, Chile",
+        "email": "contacto@eit.cl",
+        "phoneNumber": "+56229797717",
+        "image": "https://th.bing.com/th?id=OSK.DznhhVIvawt0e6Y5MYHNFXHlfCgJloOf9p7nqzO-Mbk&w=116&h=116&c=7&o=6&pid=SANGAM"
+
+      },
+      {
+        "name": "SKY Airline",
+        "website": "https://empresas.skyairline.com/",
+        "address": "Av Del Valle Sur 765, Región Metropolitana, Chile",
+        "email": "contacto.empresas@skyairline.com",
+        "phoneNumber": "+56223842991",
+        "image": "https://www.ccs.cl/wp-content/uploads/2021/04/Sky.png"
+
+      },
+      {
+        "name": "Obrador Digital",
+        "website": "https://obradordigital.cl/",
+        "address": "Nueva Providencia 1881, oficina 1823, Región Metropolitana, Chile",
+        "email": "mariajose@obradordigital.cl",
+        "phoneNumber": "+56966825602",
+        "image": "https://obradordigital.cl/wp-content/uploads/2019/01/od02.png"
+
+      },
+      {
+        "name": "Cibergestión",
+        "website": "https://cibergestion.com",
+        "address": "Miraflores 383, Piso 5, Región Metropolitana, Chile",
+        "email": "contacto@cibergestion.com",
+        "phoneNumber": "+56233267626",
+        "image": "https://cibergestion.com/wp-content/uploads/2023/09/thumnail_video.webp"
+
+      },
+      {
+        "name": "SharpSpring ",
+        "website": "https://automatizacionmarketing.com/",
+        "address": "Santa Beatriz, , 280, Providencia, Santiago 7511180, Región Metropolitana, Chile",
+        "email": "info@sharpspring.cl",
+        "phoneNumber": "+56 9 4536 9827",
+        "image": "https://smartketingsales.com/wp-content/uploads/2024/01/Logo-20-cm-x-4-cm-300-dpi-1-1024x241.png"
+
+      }
+    
+    ]
+  }
+  
