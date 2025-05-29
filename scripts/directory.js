@@ -1,75 +1,38 @@
-const cardsContainer = document.getElementById('cards');
-const gridButton = document.getElementById('grid');
-const listButton = document.getElementById('list');
+document.addEventListener("DOMContentLoaded", () => {
+    const cardsContainer = document.querySelector("#cards");
+    const gridButton = document.querySelector("#grid");
+    const listButton = document.querySelector("#list");
 
-// Cambia la vista a cuadrícula
-function switchToGrid() {
-    cardsContainer.classList.remove('list-view');
-}
+    gridButton.addEventListener("click", () => {
+        cardsContainer.classList.add("grid-view");
+        cardsContainer.classList.remove("list-view");
+    });
 
-// Cambia la vista a lista
-function switchToList() {
-    cardsContainer.classList.add('list-view');
-}
+    listButton.addEventListener("click", () => {
+        cardsContainer.classList.add("list-view");
+        cardsContainer.classList.remove("grid-view");
+    });
 
-// Eventos para botones de vista
-gridButton.addEventListener('click', switchToGrid);
-listButton.addEventListener('click', switchToList);
-
-// Cargar datos desde el archivo JSON
-async function getMemberData() {
-    try {
-        const response = await fetch('../scripts/directory.json'); // Asegúrate que el archivo esté en la misma carpeta
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const fragment = document.createDocumentFragment();
-
-        data.members.forEach(member => {
-            const card = document.createElement('div');
-            card.classList.add('card');
-
-            const image = document.createElement('img');
-            image.src = member.image;
-            image.alt = `${member.name} Logo`;
-            image.loading = 'lazy';
-            card.appendChild(image);
-
-            const detailsContainer = document.createElement('div');
-            detailsContainer.classList.add('home-grid');
-            card.appendChild(detailsContainer);
-
-            const name = document.createElement("p");
-            name.textContent = `${member.name}`;
-            detailsContainer.appendChild(name);
-
-            const address = document.createElement("p");
-            address.textContent = `${member.address}`;
-            detailsContainer.appendChild(address);
-
-            const phone = document.createElement('p');
-            phone.textContent = member.phoneNumber ? `📱 ${member.phoneNumber}` : 'Phone: N/A';
-            detailsContainer.appendChild(phone);
-
-            const email = document.createElement('p');
-            email.innerHTML = `📧 <a href="mailto:${member.email}">${member.email}</a>`;
-            detailsContainer.appendChild(email);
-
-            const website = document.createElement("p");
-            website.innerHTML = `💻 <a href="${member.website}" target="_blank">${member.website}</a>`;
-            detailsContainer.appendChild(website);
-
-            fragment.appendChild(card);
+    // Cargar datos desde members.json
+    fetch("../scripts/directory.json")
+        .then(response => response.json())
+        .then(data => {
+            data.members.forEach(member => {
+                const card = document.createElement("div");
+                card.classList.add("member-card");
+                card.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h2>${member.name}</h2>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${member.email}">${member.email}</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:${member.phoneNumber}">${member.phoneNumber}</a></p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+                cardsContainer.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error("Error loading member data:", error);
+            cardsContainer.innerHTML = "<p>Failed to load member data.</p>";
         });
-
-        cardsContainer.innerHTML = '';
-        cardsContainer.appendChild(fragment);
-    } catch (error) {
-        console.error('Error al cargar los datos:', error);
-        cardsContainer.innerHTML = '<p>Error al cargar los datos del directorio.</p>';
-    }
-}
-
-getMemberData();
+});
