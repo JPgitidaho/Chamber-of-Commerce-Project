@@ -122,8 +122,8 @@ picture img {
 }
 
 #banner {
-  top:20%;
-  width: 100%;
+  top:35%;
+  width: 50%;
   position:absolute;
   color: var(--papaya-whip);
   font-size: 1.5rem;
@@ -507,7 +507,7 @@ li:nth-child(4) {
 
 #cards img {
   background-color: var(--papaya-whip);
-  width: 80%;
+  width: 100%;
   padding: 20px;
   margin: 20px;
   height: 200px;

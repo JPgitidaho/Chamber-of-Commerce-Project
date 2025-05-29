@@ -1,44 +1,41 @@
-const cardsContainer = document.querySelector('#cards');
+const cardsContainer = document.getElementById('cards');
 const gridButton = document.getElementById('grid');
 const listButton = document.getElementById('list');
 
-// Función para cambiar a la vista de cuadrícula
+// Cambia la vista a cuadrícula
 function switchToGrid() {
     cardsContainer.classList.remove('list-view');
 }
 
-// Función para cambiar a la vista de lista
+// Cambia la vista a lista
 function switchToList() {
     cardsContainer.classList.add('list-view');
 }
 
-// Asignar eventos a los botones
+// Eventos para botones de vista
 gridButton.addEventListener('click', switchToGrid);
 listButton.addEventListener('click', switchToList);
 
+// Cargar datos desde el archivo JSON
 async function getMemberData() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/JPgitidaho/WDD-230-/main/chamber/scripts/directory.json');
-        const data = await response.json();
+        const response = await fetch('../scripts/directory.json'); // Asegúrate que el archivo esté en la misma carpeta
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
+        const data = await response.json();
         const fragment = document.createDocumentFragment();
 
         data.members.forEach(member => {
             const card = document.createElement('div');
             card.classList.add('card');
 
-
-            if (!cardsContainer.classList.contains('cards')) {
-                const image = document.createElement('img');
-                image.src = member.image;
-                image.alt = `${member.name} Logo`;
-                image.loading = 'lazy';
-                image.width =300;
-                image.height = 180;
-                card.appendChild(image);
-            }
-
-
+            const image = document.createElement('img');
+            image.src = member.image;
+            image.alt = `${member.name} Logo`;
+            image.loading = 'lazy';
+            card.appendChild(image);
 
             const detailsContainer = document.createElement('div');
             detailsContainer.classList.add('home-grid');
@@ -53,29 +50,26 @@ async function getMemberData() {
             detailsContainer.appendChild(address);
 
             const phone = document.createElement('p');
-            phone.textContent = member.phoneNumber ? ` 📱${member.phoneNumber}` : 'Phone: N/A';
+            phone.textContent = member.phoneNumber ? `📱 ${member.phoneNumber}` : 'Phone: N/A';
             detailsContainer.appendChild(phone);
-
 
             const email = document.createElement('p');
             email.innerHTML = `📧 <a href="mailto:${member.email}">${member.email}</a>`;
             detailsContainer.appendChild(email);
 
-
             const website = document.createElement("p");
-            website.innerHTML = `💻: <a href="${member.website}" target="_blank">${member.website}</a>`;
+            website.innerHTML = `💻 <a href="${member.website}" target="_blank">${member.website}</a>`;
             detailsContainer.appendChild(website);
 
             fragment.appendChild(card);
         });
 
-        cardsContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar elementos
+        cardsContainer.innerHTML = '';
         cardsContainer.appendChild(fragment);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error al cargar los datos:', error);
+        cardsContainer.innerHTML = '<p>Error al cargar los datos del directorio.</p>';
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    getMemberData();
-});
+getMemberData();
