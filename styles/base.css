@@ -88,12 +88,16 @@ picture img {
 .logo,
 .logo-link {
   margin-top: 10px;
-  width:50%;
+  width:180px;
 }
 
 .hero img {
   width: 100%;
   margin-top: -100px;
+}
+.dark-mode .hero img {
+  
+  filter: brightness(0.7) contrast(1.2);
 }
 
 .hero {
@@ -117,8 +121,7 @@ picture img {
   z-index: 4;
   width: 100%;
   justify-content: space-around;
-  align-items: center;
-  
+  align-items: center; 
 }
 
 #banner {
@@ -144,7 +147,7 @@ picture img {
   cursor: pointer;
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 15px;
 }
 
 #burger-icon {

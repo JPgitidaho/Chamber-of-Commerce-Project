@@ -128,9 +128,18 @@
     margin: 10px 0 50px;
   }
 }
-@media (max-width: 667px) {
+@media (max-width: 1200px) {
   #miHeader {
     background-color: #0c3338 !important;
+  }
+ .h1-hero {
+  margin-top: 50px;
+  font-size: 2em;
+  
+}
+ .button {
+    padding:  10px;
+    font-size: 16px;
   }
 }
 
